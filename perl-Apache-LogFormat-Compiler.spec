@@ -1,7 +1,10 @@
-%include	/usr/lib/rpm/macros.perl
+#
+# Conditional build:
+%bcond_without	tests		# build without tests
+
 %define		pdir	Apache
 %define		pnam	LogFormat-Compiler
-%bcond_without	tests
+%include	/usr/lib/rpm/macros.perl
 Summary:	Apache::LogFormat::Compiler - Compile a log format string to perl-code
 Name:		perl-Apache-LogFormat-Compiler
 Version:	0.13
@@ -10,12 +13,13 @@ License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	fd04ee3f4c2164b7f7909d85f11e467a
+URL:		http://search.cpan.org/dist/Apache-LogFormat-Compiler/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-Compile a log format string to perl-code. For faster generation of
+Compile a log format string to Perl-code. For faster generation of
 access_log lines.
 
 %prep
