@@ -8,7 +8,7 @@
 Summary:	Apache::LogFormat::Compiler - Compile a log format string to perl-code
 Name:		perl-Apache-LogFormat-Compiler
 Version:	0.13
-Release:	1
+Release:	2
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
