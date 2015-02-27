@@ -16,6 +16,10 @@ Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version
 URL:		http://search.cpan.org/dist/Apache-LogFormat-Compiler/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
+%if %{with tests}
+BuildRequires:	perl-HTTP-Message
+BuildRequires:	perl-Try-Tiny
+%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -35,7 +39,6 @@ access_log lines.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-
 ./Build install
 
 %clean
