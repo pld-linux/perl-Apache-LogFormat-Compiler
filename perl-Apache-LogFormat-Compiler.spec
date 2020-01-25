@@ -4,7 +4,6 @@
 
 %define		pdir	Apache
 %define		pnam	LogFormat-Compiler
-%include	/usr/lib/rpm/macros.perl
 Summary:	Apache::LogFormat::Compiler - Compile a log format string to perl-code
 Name:		perl-Apache-LogFormat-Compiler
 Version:	0.35
