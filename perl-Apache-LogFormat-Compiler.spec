@@ -13,10 +13,12 @@ Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	cbb0bf041ade8a39f65eadbdf8a346c1
 URL:		http://search.cpan.org/dist/Apache-LogFormat-Compiler/
+BuildRequires:	perl-Module-Build-Tiny
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 3.0.3-26
 %if %{with tests}
 BuildRequires:	perl-HTTP-Message
+BuildRequires:	perl-Test-MockTime
 BuildRequires:	perl-POSIX-strftime-Compiler
 BuildRequires:	perl-Try-Tiny
 %endif
