@@ -6,12 +6,12 @@
 %define		pnam	LogFormat-Compiler
 Summary:	Apache::LogFormat::Compiler - Compile a log format string to perl-code
 Name:		perl-Apache-LogFormat-Compiler
-Version:	0.35
-Release:	2
+Version:	0.36
+Release:	1
 License:	Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	cbb0bf041ade8a39f65eadbdf8a346c1
+# Source0-md5:	a0cdfcd875cb2ee4dc9a2c24381eb55b
 URL:		http://search.cpan.org/dist/Apache-LogFormat-Compiler/
 BuildRequires:	perl-Module-Build-Tiny
 BuildRequires:	perl-devel >= 1:5.8.0
@@ -22,6 +22,7 @@ BuildRequires:	perl-Test-MockTime
 BuildRequires:	perl-POSIX-strftime-Compiler
 BuildRequires:	perl-Try-Tiny
 %endif
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
